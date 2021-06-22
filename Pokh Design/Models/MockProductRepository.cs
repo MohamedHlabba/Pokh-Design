@@ -25,7 +25,7 @@ namespace Pokh_Design.Models
             }
         }
 
-        public Product GetProductById(int productId)
+    public Product GetProductById(int productId)
         {
             return AllProducts.FirstOrDefault(p=>p.ProductId==productId);
         }
