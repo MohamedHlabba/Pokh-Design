@@ -1,8 +1,8 @@
 ﻿@model Product
 
 <div class="col-sm-4 col-lg-4 col-md-4">
-    <div class="thumbnail">
-        <img src="@Model.ImageUrl" />
+    <div class="card">
+        <img  class="card-img top"src="@Model.ImageUrl" />
         <div class="caption-full">
             <h3 class="pull-right">@Model.Price.ToString("c")</h3>
             <h3>
@@ -12,7 +12,7 @@
         </div>
         <div class="addToCart">
             <p class="button">
-                <a class="btn btn-outline-primary" asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-dogId="@Model.ProductId">
+                <a class="btn btn-primary" asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-dogId="@Model.ProductId">
                     Add to cart
                 </a>
             </p>
