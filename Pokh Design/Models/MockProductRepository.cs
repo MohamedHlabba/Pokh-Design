@@ -18,16 +18,17 @@ namespace Pokh_Design.Models
 
         };
 
-        public IEnumerable<Product> ProductsOfTheWeek {      
+        public IEnumerable<Product> ProductsOfTheWeek
+        {
             get
             {
                 return AllProducts.Where(c => c.IsProductOfTheWeek);
             }
         }
 
-    public Product GetProductById(int productId)
+        public Product GetProductById(int productId)
         {
-            return AllProducts.FirstOrDefault(p=>p.ProductId==productId);
+            return AllProducts.FirstOrDefault(p => p.ProductId == productId);
         }
     }
 }
