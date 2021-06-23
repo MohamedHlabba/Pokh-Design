@@ -18,6 +18,7 @@ namespace Pokh_Design.Models
            new  Product{ProductId=4,Name="Blue Chair",LongDescription="Made by humans in Tunisian fabric",ShortDescription="Lorem Ipsum",Price=3450,InStock=true,IsProductOfTheWeek=false,Category=_categoryRepository.AllCategories.ToList()[2],ImageUrl="/images/blueChair.jpg",ImageThumbnailUrl="https://www.facebook.com/pokhdesign/photos/a.865753123532880/865753080199551/"},
            new  Product{ProductId=4,Name="Yellow Chair",LongDescription="Made by humans in Tunisian fabric",ShortDescription="Lorem Ipsum",Price=3450,InStock=true,IsProductOfTheWeek=false,Category=_categoryRepository.AllCategories.ToList()[2],ImageUrl="/images/YellowChair.jpg",ImageThumbnailUrl="https://www.facebook.com/pokhdesign/photos/a.865753123532880/865753080199551/"},
            new  Product{ProductId=4,Name="Green  Chair",LongDescription="Made by humans in Tunisian fabric",ShortDescription="Lorem Ipsum",Price=3450,InStock=true,IsProductOfTheWeek=false,Category=_categoryRepository.AllCategories.ToList()[2],ImageUrl="/images/GreenChair.jpg",ImageThumbnailUrl="https://www.facebook.com/pokhdesign/photos/a.865753123532880/865753080199551/"},
+           new  Product{ProductId=4,Name="Big Chair and Pouf",LongDescription="Made by humans in Tunisian fabric",ShortDescription="Lorem Ipsum",Price=3450,InStock=true,IsProductOfTheWeek=true,Category=_categoryRepository.AllCategories.ToList()[2],ImageUrl="/images/BigArmAndPouf.jpg",ImageThumbnailUrl="https://www.facebook.com/pokhdesign/photos/a.865753123532880/865753080199551/"},
 
         };
 
