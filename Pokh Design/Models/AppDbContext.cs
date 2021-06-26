@@ -24,6 +24,7 @@ namespace Pokh_Design.Models
             modelBuilder.Entity<Category>().HasData(new Category { CategoryId = 1, CategoryName = "Chair", Description = "All-Hand Made Chairs" });
             modelBuilder.Entity<Category>().HasData(new Category { CategoryId = 2, CategoryName = "Pouf", Description = "Elegant Leather Piece" });
             modelBuilder.Entity<Category>().HasData(new Category { CategoryId = 3, CategoryName = "ArmChair", Description = "Get the comfort that you deserve" });
+            modelBuilder.Entity<Category>().HasData(new Category { CategoryId = 4, CategoryName = "Lamp", Description = "Smart lamp with the best design ever" });
 
 
 
@@ -36,6 +37,7 @@ namespace Pokh_Design.Models
             modelBuilder.Entity<Product>().HasData( new Product { ProductId = 6, Name = "Yellow Chair", LongDescription = "Made by humans in Tunisian fabric", ShortDescription = "Lorem Ipsum", Price = 3450, InStock = true, IsProductOfTheWeek = false, CategoryId=3 , ImageUrl = "/images/YellowChair.jpg", ImageThumbnailUrl = "https://www.facebook.com/pokhdesign/photos/a.865753123532880/865753080199551/" });
             modelBuilder.Entity<Product>().HasData (new Product { ProductId = 7, Name = "Green  Chair", LongDescription = "Made by humans in Tunisian fabric", ShortDescription = "Lorem Ipsum", Price = 3450, InStock = true, IsProductOfTheWeek = false, CategoryId=3,  ImageUrl = "/images/GreenChair.jpg", ImageThumbnailUrl = "https://www.facebook.com/pokhdesign/photos/a.865753123532880/865753080199551/" });
             modelBuilder.Entity<Product>().HasData (new Product { ProductId = 8, Name = "Big Chair and Pouf", LongDescription = "Made by humans in Tunisian fabric", ShortDescription = "Lorem Ipsum", Price = 3450, InStock = true, IsProductOfTheWeek = true, CategoryId = 3, ImageUrl = "/images/BigArmAndPouf.jpg", ImageThumbnailUrl = "https://www.facebook.com/pokhdesign/photos/a.865753123532880/865753080199551/" });
+            modelBuilder.Entity<Product>().HasData (new Product { ProductId = 9, Name = "lamp", LongDescription = "Those lamps Made by humans in Tunisian fabric", ShortDescription = "Lorem Ipsum", Price = 1500, InStock = true, IsProductOfTheWeek = true, CategoryId = 4, ImageUrl = "/images/lamp.png", ImageThumbnailUrl = "https://www.facebook.com/pokhdesign/photos/a.865753123532880/865753080199551/" });
 
 
         }
