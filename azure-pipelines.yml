@@ -28,4 +28,4 @@ steps:
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Build.ArtifactStagingDirectory)' 
-    artifactName: 'Pokh_Design'
+    artifactName: 'Pokh Design'
