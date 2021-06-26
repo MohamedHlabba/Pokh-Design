@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Pokh_Design.Models;
+using Pokh_Design.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -13,14 +14,21 @@ namespace Pokh_Design.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public IProductRepository _productRepository { get; }
+
+        public HomeController(ILogger<HomeController> logger, IProductRepository productRepository)
         {
             _logger = logger;
+            _productRepository = productRepository;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var homeViewModel = new HomeViewModel
+            {
+                ProductsOfTheWeek = _productRepository.ProductsOfTheWeek
+            };
+            return View(homeViewModel);
         }
 
         public IActionResult Privacy()
