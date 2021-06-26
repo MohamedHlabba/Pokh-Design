@@ -26,5 +26,13 @@ namespace Pokh_Design.Controllers
             productListViewModel.CurrentCategory = "Hand Made Furniture";
             return View(productListViewModel);
         }
+        public IActionResult Details(int id)
+        {
+            var product = _productRepository.GetProductById(id);
+            if (product == null)
+                return NotFound();
+
+            return View(product);
+        }
     }
 }
