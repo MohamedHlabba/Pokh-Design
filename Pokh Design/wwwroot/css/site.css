@@ -32,10 +32,17 @@
         white-space: nowrap;
     }
 
-.thumbnail img {
-    width: 100%;
-}
+/*.thumbnail img {
+     height: 150%;*/
+    /*width: 250%;
+    object-fit: cover;*/
+    /*width: 150%;
+}*/
 
+#img{
+    height:250px;
+    width:250px;
+}
 .addToCart {
     padding-right: 10px;
     padding-left: 10px;
@@ -44,6 +51,14 @@
 .thumbnail {
     padding: 0;
     box-shadow: -30px 30px 20px rgba(0,0,0,0.3);
+    /*extra*/
+/*    background-color: black;*/
+   /* width: 250px;
+    height: 200px;*/
+    /*display: inline-block;*/  /*makes it fit in like an <img> */
+    /*background-size: cover;*/  /*or contain*/ 
+/*    background-position: center center;
+    background-repeat: no-repeat;*/
 }
 
     .thumbnail .caption-full {
