@@ -33,6 +33,8 @@ namespace Pokh_Design
 
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<ShoppingCart>(sp => ShoppingCart.GetCart(sp));
+
             services.AddHttpContextAccessor();
 
             services.AddSession();
