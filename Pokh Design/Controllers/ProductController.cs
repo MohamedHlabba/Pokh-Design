@@ -18,13 +18,32 @@ namespace Pokh_Design.Controllers
             _productRepository = productRepository;
             _categoryRepository = categoryRepository;
         }
-        public IActionResult List()
-        {
-            ProductListViewModel productListViewModel = new ProductListViewModel();
-            productListViewModel.Products = _productRepository.AllProducts;
+        //public IActionResult List()
+        //{
+        //    ProductListViewModel productListViewModel = new ProductListViewModel();
+        //    productListViewModel.Products = _productRepository.AllProducts;
 
-            productListViewModel.CurrentCategory = "Hand Made Furniture";
-            return View(productListViewModel);
+        //    productListViewModel.CurrentCategory = "Hand Made Furniture";
+        //    return View(productListViewModel);
+        //}
+
+        public ViewResult List(string category)
+        {
+            IEnumerable<Product> products;
+            string currentCategory;
+            if (string.IsNullOrEmpty(category))
+            {
+                products = _productRepository.AllProducts.OrderBy(p=>p.ProductId);
+                currentCategory = "All products";
+            }
+            else
+            {
+                products = _productRepository.AllProducts.Where(p => p.Category.CategoryName == category)
+                    .OrderBy(p => p.ProductId);
+                currentCategory = _categoryRepository.AllCategories.FirstOrDefault(c => c.CategoryName == category)?.CategoryName;
+            }
+            return View(new ProductListViewModel { Products=products,CurrentCategory=currentCategory});
+
         }
         public IActionResult Details(int id)
         {
