@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>Pokh_Design</RootNamespace>
+    <UserSecretsId>f8d4a291-13d3-4f8b-8bf1-0d442158d1ac</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

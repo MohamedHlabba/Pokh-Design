@@ -35,9 +35,9 @@ namespace Pokh_Design.Controllers
             return View(shoppingCartViewModel);
         }
 
-        public RedirectToActionResult AddToShoppingCart(int producId)
+        public RedirectToActionResult AddToShoppingCart(int productId)
         {
-            var selectedProduct = _productRepository.AllProducts.FirstOrDefault(p => p.ProductId == producId);
+            var selectedProduct = _productRepository.AllProducts.FirstOrDefault(p => p.ProductId == productId);
 
             if (selectedProduct != null)
             {
@@ -46,9 +46,9 @@ namespace Pokh_Design.Controllers
             return RedirectToAction("Index");
         }
 
-        public RedirectToActionResult RemoveFromShoppingCart(int producId)
+        public RedirectToActionResult RemoveFromShoppingCart(int productId)
         {
-            var selectedProduct = _productRepository.AllProducts.FirstOrDefault(p => p.ProductId == producId);
+            var selectedProduct = _productRepository.AllProducts.FirstOrDefault(p => p.ProductId == productId);
 
             if (selectedProduct != null)
             {
