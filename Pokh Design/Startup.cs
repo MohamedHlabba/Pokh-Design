@@ -52,8 +52,8 @@ namespace Pokh_Design
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
-
             app.UseStaticFiles();
+
             app.UseSession();
 
             app.UseRouting();
